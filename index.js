@@ -16,11 +16,10 @@ function displayCurrentWeather(json) {
   document.getElementById("temp").innerHTML = json.main.temp;
   document.getElementById("low").innerHTML = json.main.temp_min;
   document.getElementById("high").innerHTML = json.main.temp_max;
-  document.getElementById("humidity").innerHTML = json.main
-  document.getElementById("cloudCover").innerHTML = json.main
-  document.getElementById("sunrise").innerHTML = json.main
-  document.getElementById("sunset").innerHTML = json.main
-  
+  document.getElementById("humidity").innerHTML = json.main.humidity;
+  document.getElementById("cloudCover").innerHTML = json.main.clouds.all;
+}
+
 function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}`)
@@ -37,5 +36,5 @@ function createChart(json) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  addEventListener()
+  addEventListener("submit", handleFormSubmit);
 })
