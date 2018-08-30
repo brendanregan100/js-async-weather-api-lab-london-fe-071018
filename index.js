@@ -14,11 +14,12 @@ function fetchCurrentWeather(city) {
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
   document.getElementById("temp").innerHTML = json.main
-  document.getElementById("temp").innerHTML = json.main
-  document.getElementById("temp").innerHTML = json.main
-  document.getElementById("temp").innerHTML = json.main
-  document.getElementById("temp").innerHTML = json.main
-  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("low").innerHTML = json.main
+  document.getElementById("high").innerHTML = json.main
+  document.getElementById("humidity").innerHTML = json.main
+  document.getElementById("cloudCover").innerHTML = json.main
+  document.getElementById("sunrise").innerHTML = json.main
+  document.getElementById("sunset").innerHTML = json.main
   
 function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
@@ -36,5 +37,5 @@ function createChart(json) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  //add event listener here for form submission
+  addEventListener()
 })
