@@ -7,7 +7,7 @@ function handleFormSubmit(event) {
 function fetchCurrentWeather(city) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`)  
   .then(resp => resp.json())
-  .then(json => console.log(json))
+  .then(json => displayCurrentWeather(json))
   .catch(error => console.log(error))
 }
 
