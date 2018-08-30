@@ -13,11 +13,13 @@ function fetchCurrentWeather(city) {
 
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
-  document.getElementById("temp").innerHTML = json..
+  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main
   
-}
-
-
 function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}`)
