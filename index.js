@@ -1,20 +1,28 @@
-const API_KEY = "YOUR API KEY"
+const API_KEY = "fd6778d4febe931b004d4ca0cdf194be"
 
 function handleFormSubmit(event) {
-  //handle submit event
+  document.getElementById("cityForm").addEventListener("click", fetchCurrentWeather)
 }
 
 function fetchCurrentWeather(city) {
-  //fetch current weather based on city
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}`)  
+  .then(resp => resp.json())
+  .then(json => console.log(json))
+  .catch(error => console.log(error))
 }
 
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
+  document.getElementById("temp").innerHTML = json..
+  
 }
 
 
 function fetchFiveDayForecast(city) {
   //fetch five day forecast data based on city
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}`)
+  .then(resp => resp.json())
+  .then(json => console.log(json));
 }
 
 function displayFiveDayForecast(json) {
