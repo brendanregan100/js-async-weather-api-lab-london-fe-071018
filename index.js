@@ -13,9 +13,9 @@ function fetchCurrentWeather(city) {
 
 function displayCurrentWeather(json) {
   //render current weather data to the DOM using provided IDs and json from API
-  document.getElementById("temp").innerHTML = json.main.temp
-  document.getElementById("low").innerHTML = json.main
-  document.getElementById("high").innerHTML = json.main
+  document.getElementById("temp").innerHTML = json.main.temp;
+  document.getElementById("low").innerHTML = json.main.temp_min;
+  document.getElementById("high").innerHTML = json.main.temp_max;
   document.getElementById("humidity").innerHTML = json.main
   document.getElementById("cloudCover").innerHTML = json.main
   document.getElementById("sunrise").innerHTML = json.main
